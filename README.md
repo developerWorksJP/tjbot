@@ -1,73 +1,77 @@
 # IBM TJBot
 <img src="images/tjbot.jpg" width="85%">
 
-[IBM Watson Maker Kits](http://ibm.biz/mytjbot) are a collection of DIY open source templates to build things with [Watson](https://www.ibm.com/watson/developercloud/services-catalog.html) in a fun and easy way. [IBM TJBot](http://ibm.biz/mytjbot) is the first maker kit in the collection. You can 3D print or laser cut the robot body, then use one of our [recipes](recipes) to bring him to life!
+[IBM Watson Maker Kits](http://ibm.biz/mytjbot)は、[Watson](https://www.ibm.com/watson/developercloud/services-catalog.html)で楽しく簡単な方法でビルドするDIYオープンソース・テンプレートのコレクションです。[IBM TJBot](http://ibm.biz/mytjbot) は、コレクションで初めてのメーカーキットです。 3Dプリントやレーザーボディをレーザーカットした後、レシピを使って命を吹き込むことができます！
+さらに、独自の創造性を発揮し、利用可能な[Watsonサービス](https://www.ibm.com/watson/developercloud/services-catalog.html)を使用してTJBotに新しい[recipes](recipes)を作成することができます。
 
-In addition, you can unleash your own creativity and create new recipes that bring TJBot to life using any of the available [Watson services](https://www.ibm.com/watson/developercloud/services-catalog.html)!
+**TJBotはラズベリーパイでのみ動作します。**
 
-**TJBot only works with a Raspberry Pi.**
+# TJBotを作る
+さまざまな方法で独自のTJBotを作ることができます。
 
-# Build TJBot
-You can make your own TJBot in a number of ways.
+- **３Dプリンタまたはレーザーカット**：3Dプリンタやレーザーカッターにアクセスできる場合は、TJBotを印刷したり、カットしたりすることができます。 まず、[デザインファイル](https://ibmtjbot.github.io/#gettj)をダウンロードし、プリンタ/カッターを起動します。
+- **TJBotフルキット**：  [Sparkfun](https://www.sparkfun.com/products/14123)、[Adafruit](https://www.adafruit.com/product/3462)、もしくは[Robotkingdom](http://shop.robotkingdom.com.tw/raspberry-pi/tjbot01.html)のレーザーカットボール紙とすべての電子機器で、完全なTJBotキットをオーダーすることができます。
+- **TJBotカードボードキット**：[Texas Laser Creations](http://texlaser.com)からTJBotレーザーカット厚紙を購入することができます。
 
-- **3d Print or Laser Cut**. If you have access to a 3D printer or laser cutter, you can print/cut TJBot yourself. Begin by downloading the [design files](https://ibmtjbot.github.io/#gettj) and firing up your printer/cutter.
-- **TJBot Full Kit**. You can order a full TJBot kit with the laser cut cardboard and all the electronics from [Sparkfun](https://www.sparkfun.com/products/14123), [Adafruit](https://www.adafruit.com/product/3462), or [Robotkingdom](http://shop.robotkingdom.com.tw/raspberry-pi/tjbot01.html).
-- **TJBot Cardboard Kit**. You can purchase the TJBot laser cut cardboard from [Texas Laser Creations](http://texlaser.com).
 
-## Electronics
-There are a number of components you can add to TJBot to bring him to life. Not all of these are required for all recipes.
+## エレクトロニクス
+TJBotを動かすために追加可能な様々なコンポーネントがあります。すべてのレシピにこれらのすべてが必要というわけではありません。
 
-- [Raspberry Pi 3 + SD card preloaded with NOOBS](http://www.mcmelectronics.com/product/RASPBERRY-PI-RPI-MODB-16GB-NOOBS-/83-17304). **This is a required component to make TJBot work!** 🤖
-- [NeoPixel RGB LED (8mm)](https://www.adafruit.com/product/1734). Note that if you are using other kinds of LEDs, you may need to add a resistor; this LED doesn’t require one.
-- [Female-to-female jumper wires](https://www.amazon.com/dp/B00KOL5BCC/). TJBot will only need 3 of these wires, so you’ll have extra.
-- [Female-to-male jumper wires](https://www.amazon.com/dp/B00PBZMN7C/). TJBot will only need 3 of these wires, so you’ll have extra.
-- [USB Microphone](https://www.amazon.com/gp/product/B00IR8R7WQ/). Other brands of USB microphones should also work.
-- [Mini Bluetooth Speaker](https://www.amazon.com/gp/product/B00OEPCHL2/). Any small speaker with either a 3.5mm audio jack or Bluetooth will work. Note that if you are using the 3.5mm audio jack, you may wish to add a [USB Audio Adapter](https://www.adafruit.com/product/1475) to avoid audio interference with the LED.
-- [Servo Motor](https://www.amazon.com/RioRand-micro-Helicopter-Airplane-Controls/dp/B00JJZXRR0/). Note that the red (middle) wire is 5v, the brown wire is ground, and the orange wire is data.
-- [Raspberry Pi Camera](https://www.amazon.com/dp/B01ER2SKFS/). Either the 5MP or 8MP camera will work.
+- [Raspberry Pi 3 + NOOBSがプリロードされたSDカード](http://www.mcmelectronics.com/product/RASPBERRY-PI-RPI-MODB-16GB-NOOBS-/83-17304). **これはTJBotを動作させるために必要なコンポーネントです！** 🤖
+- [NeoPixel RGB LED (8mm)](https://www.adafruit.com/product/1734)：他の種類のLEDを使用している場合は、レジスターを追加する必要があります。このLEDは1つを必要としません。
+- [メス - メスジャンパーワイヤー](https://www.amazon.com/dp/B00KOL5BCC/)：TJBotはこれらのワイヤーのうちの3つだけを必要とするので、余分なものがあります。
+- [メス-オスのジャンパーワイヤー](https://www.amazon.com/dp/B00PBZMN7C/)：TJBotはこれらのワイヤーのうちの3つだけを必要とするので、余分なものがあります。
+- [USBマイク](https://www.amazon.com/gp/product/B00IR8R7WQ/)：他のブランドのUSBマイクも動作するはずです。
+- [ミニBluetoothスピーカー](https://www.amazon.com/gp/product/B00OEPCHL2/)：3.5mmオーディオジャックまたはBluetoothのいずれかの小型スピーカーが動作します。 3.5mmオーディオジャックを使用している場合は、[USBオーディオアダプタ](https://www.adafruit.com/product/1475)を追加して、LEDによるオーディオの干渉を避けることができます。
+- [サーボモーター](https://www.amazon.com/RioRand-micro-Helicopter-Airplane-Controls/dp/B00JJZXRR0/)：赤（中）のワイヤは5V、茶色のワイヤはグラウンド、オレンジのワイヤはデータです。
 
-## Assembly
-Once you have obtained your TJBot, please refer to [the assembly instructions](http://www.instructables.com/id/Build-TJ-Bot-Out-of-Cardboard/) to put it all together.
+- [Raspberry Pi Camera](https://www.amazon.com/dp/B01ER2SKFS/)：5MPまたは8MPカメラのいずれかが動作します。
 
-For reference, here is the wiring diagram to hook up the LED and servo to your Raspberry Pi.
+
+## アセンブリ
+TJBotを入手したら、[アセンブリ説明書](http://www.instructables.com/id/Build-TJ-Bot-Out-of-Cardboard/)を参照ください。
+参考までに、ここではLEDとサーボをRaspberry Piに接続する配線図は次の通りです。
+
+
 
 ![](images/wiring.png)
 
-> 💡 Be careful when connecting the LED! If it is connected the wrong way, you may end up burning it out. The LED has a flat notch on one side; use this to orient the LED and figure out which pin is which.
+> 💡 LEDを接続するときはご注意ください！ 間違った方法で接続されると、燃える可能性があります。 LEDは一方の面に平坦なノッチを有します。これを使用してLEDの向きを確認し、どのピンがどれであるか把握します。
 
-> For the servo, note that the red (middle) wire is 5v, the brown wire is ground, and the orange wire is data.
+> サーボの場合は、赤（中）のワイヤが5V、茶色のワイヤがグラウンド、オレンジのワイヤがデータであることに注意してください。
 
-# Bring TJBot to Life
-First, make sure you have configured your Raspberry Pi for TJBot.
-Just run that command to download and install TJBot:
+# TJBotを動かす
+まず、TJBot用にRaspberry Piを設定していることを確認します。 そのコマンドを実行してTJBotをダウンロードしてインストールしてください：
 
 ```
 curl -sL http://ibm.biz/tjbot-bootstrap | sudo sh -
 ```
 
-[Recipes](recipes) are step-by-step instructions to bring your TJBot to life with [Watson](https://www.ibm.com/watson/developercloud/services-catalog.html).
+[レシピ](recipes)では、[Watson](https://www.ibm.com/watson/developercloud/services-catalog.html)でTJBotを動かすためのステップ by ステップの手順を説明しています。
 
-We have provided three initial [recipes](recipes) for you:
+3つの初期 [レシピ](recipes)をご紹介しています:
 
-- Use Your Voice to Control a Light with Watson [[instructions](http://www.instructables.com/id/Use-Your-Voice-to-Control-a-Light-With-Watson/)] [[github](https://github.com/ibmtjbot/tjbot/tree/master/recipes/speech_to_text)]
-- Make Your Robot Respond to Emotions Using Watson [[instructions](http://www.instructables.com/id/Make-Your-Robot-Respond-to-Emotions-Using-Watson/)] [[github](https://github.com/ibmtjbot/tjbot/tree/master/recipes/sentiment_analysis)]
-- Build a Talking Robot with Watson [[instructions](http://www.instructables.com/id/Build-a-Talking-Robot-With-Watson-and-Raspberry-Pi/)] [[github](https://github.com/ibmtjbot/tjbot/tree/master/recipes/conversation)]
+- ワトソンで光を制御するためにあなたの声を使用する [[説明](http://www.instructables.com/id/Use-Your-Voice-to-Control-a-Light-With-Watson/)] [[github](https://github.com/ibmtjbot/tjbot/tree/master/recipes/speech_to_text)]
+- ワトソンを使ってあなたのロボットが感情に反応するようにする[[説明](http://www.instructables.com/id/Make-Your-Robot-Respond-to-Emotions-Using-Watson/)] [[github](https://github.com/ibmtjbot/tjbot/tree/master/recipes/sentiment_analysis)]
+- ワトソンと話すロボットを作る [[説明](http://www.instructables.com/id/Build-a-Talking-Robot-With-Watson-and-Raspberry-Pi/)] [[github](https://github.com/ibmtjbot/tjbot/tree/master/recipes/conversation)]
 
-After checking out our sample recipes, we encourage you to take a look at [featured recipes](featured) created by members of our community.
+サンプルレシピをチェックした後、コミュニティのメンバーが作成した[レシピ](featured)もご覧ください。 
 
-# Contribute to TJBot
-TJBot is an open source project designed to make it fun and easy to interact with [Watson](https://www.ibm.com/watson/developercloud/services-catalog.html). We’d love to see what you can make with him. Here are some ideas to get you started.
+# TJBotに貢献する
+TJBotは、[Watson](https://www.ibm.com/watson/developercloud/services-catalog.html)と楽しく簡単にやりとりできるように設計されたオープンソースプロジェクトです。まず、始めるため役立つアイデアをご紹介します。
 
-- **Visual recognition**. Make TJBot recognize your face using the [Watson Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html) service and the Raspberry Pi Camera.
-- **IoT**. Let TJBot control your smart home devices using the [Watson IoT platform](https://www.ibm.com/internet-of-things/platform/watson-iot-platform/).
-- **Connected robots**. Program multiple TJBots to chat with each other!
+- **Visual recognition**：[Watson Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html) サービスとRaspberry Pi カメラを使用して、TJBotがあなたの顔を認識できるようにします。
+- **IoT**.：TJBotが[Watson IoTプラットフォーム](https://www.ibm.com/internet-of-things/platform/watson-iot-platform/)を使用してスマートホームデバイスを制御できるようにします。
+- **Connected robots**：複数のTJBotとチャットできるようプログラムしましょう。
 
-If you would like your own recipe included in our [featured recipe](featured) list, please [send us email](mailto:tjbot@us.ibm.com) with a link to your repository and a demo video.
+あなたのレシピを[レシピ](featured)のリストに掲載したい場合は、レポジトリへのリンクとデモビデオを[eメール](mailto:tjbot@us.ibm.com)でお送りください。
+ 
 
-# About TJBot
-[TJBot](http://ibm.biz/mytjbot) was affectionately named after Thomas J. Watson, the first Chairman and CEO of IBM. TJBot was created by [Maryam Ashoori](https://github.com/maryamashoori) at IBM Research as an experiment to find the best practices in the design and implementation of cognitive objects. He was born on November 9, 2016 via [this blog post](https://www.ibm.com/blogs/research/2016/11/calling-makers-meet-tj-bot/).
+# TJBotについて
+[TJBot](http://ibm.biz/mytjbot)は、IBMの初代 会長兼最高経営責任者（CEO）であるトーマス・J・ワトソンの名称にちなんで命名され、IBM Researchの[Maryam Ashoori](https://github.com/maryamashoori)によって、コグニティブな物体の設計と実装におけるベストプラクティスを見つけるための実験として作成されました。 TJBotは[このブログ](https://www.ibm.com/blogs/research/2016/11/calling-makers-meet-tj-bot/)の投稿を通じて2016年11月9日に誕生しました。
 
-Feel free to [contact the team](mailto:tjbot@us.ibm.com) with any questions (except technical issues). For technical issues, please create an [issue](https://github.com/ibmtjbot/tjbot/issues) instead.
+ご不明な点があればお気軽に[チーム](mailto:tjbot@us.ibm.com)にご連絡ください（TJBotに関する技術的な問題を除き）。 技術的な問題については、こちらに[issue](https://github.com/ibmtjbot/tjbot/issues)としてご記入願います。
 
-# License
-This project uses the [Apache License Version 2.0](LICENSE) software license.
+
+# ライセンス
+このプロジェクトでは、[Apache License Version 2.0](LICENSE) ソフトウェアライセンスを使用しています。
